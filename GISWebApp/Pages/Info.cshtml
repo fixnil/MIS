@@ -1,0 +1,52 @@
+﻿@page
+@model WebApplication.Pages.InfoModel
+
+@{
+    ViewData["Title"] = "最新状态";
+}
+
+<h2>最新状态</h2> <span class="" id="time">@Model.Info.Time</span>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="Info.Temp" class="control-label"></label>
+            <input disabled id="temp" asp-for="Info.Temp" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Info.Hum" class="control-label"></label>
+            <input disabled id="hum" asp-for="Info.Hum" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Info.NH3" class="control-label"></label>
+            <input disabled id="nh3" asp-for="Info.NH3" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Info.Light" class="control-label"></label>
+            <input disabled id="light" asp-for="Info.Light" class="form-control" />
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            setInterval(reflsh, 2000);
+        });
+
+        function reflsh() {
+            $.get("/info?handler=getinfo", function (data) {
+                $("#temp").val(data.temp);
+                $("#hum").val(data.hum);
+                $("#co2").val(data.cO2);
+                $("#nh3").val(data.nH3);
+                $("#light").val(data.light);
+                $("#time").html(data.time);
+                console.log(data.time);
+            }).fail(function () {
+                location.href = "/Info";
+            });
+        }
+    </script>
+}
