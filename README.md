@@ -50,6 +50,10 @@
 
 说明：(,为半角); [] 表示可选
 
+## 下载
+
+[下载地址](https://github.com/Dudeping/MIS/releases)
+
 ## 演示
 
 [好像 Markdown 不能链接视频](http://t.cn/R3swG9R)
