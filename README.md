@@ -36,8 +36,14 @@
 3. 双击步骤 2 中的到的安装程序；
 4. 安装后运行程序，选择步骤 1 中得到的 publish 文件以配置网站。
 
+## 数据格式
+
+数据格式(以 $ 结束)：温度,湿度,NH3,光照[,警报]$
+
+例如: 23,60,100,1000[,1]$
+
+说明：(,为半角); [] 表示可选
+
 ## 演示
 
 [好像 Markdown 不能链接视频](http://t.cn/R3swG9R)
-
-<iframe height=498 width=510 src='http://player.youku.com/embed/XMzYyMzEyMDE2OA==' frameborder=0 'allowfullscreen'></iframe>
