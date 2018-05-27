@@ -25,9 +25,9 @@
 
 1. 根据微软提示，在上下文中配置 `optionsBuilder.UseSqlServer(constr, b => b.MigrationsAssembly("GISWebApp"))`;
 2. 设置 GISWebApp 为启动项目，到 GISWebApp 项目中执行 `Add-Migrations` 命令；
-3. 将生成的 migrations 文件夹拷贝到上下文所在的类库项目中；
-4. 去掉步骤 2 中的修改；
-5. 现在便可以在 winform 中调用 migrate 方法了。
+3. 将生成的 Migrations 文件夹拷贝到上下文所在的类库项目中；
+4. 去掉步骤 1 中的修改；
+5. 现在便可以在 Winform 中调用 Migrate 方法了。
 
 ## 发布步骤
 
